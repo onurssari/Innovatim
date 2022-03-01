@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:innovatim/pages/discount.dart';
 import 'package:innovatim/pages/forgot_password_page.dart';
 import 'package:innovatim/pages/forgot_password_verification_page.dart';
+import 'package:innovatim/pages/gorev.dart';
 import 'package:innovatim/pages/login_page.dart';
 import 'package:innovatim/pages/maps.dart';
 import 'package:innovatim/pages/profile_page.dart';
@@ -163,6 +164,29 @@ class MyDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
+                Icons.account_tree_outlined,
+                size: _drawerIconSize,
+                color: Theme.of(context).primaryColor,
+              ),
+              title: Text(
+                'Görevlerim',
+                style: TextStyle(
+                    fontSize: _drawerFontSize,
+                    color: Theme.of(context).primaryColor),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GorevPage()),
+                );
+              },
+            ),
+            Divider(
+              color: Theme.of(context).primaryColor,
+              height: 1,
+            ),
+            ListTile(
+              leading: Icon(
                 Icons.logout_rounded,
                 size: _drawerIconSize,
                 color: Theme.of(context).primaryColor,
@@ -174,7 +198,8 @@ class MyDrawer extends StatelessWidget {
                     color: Theme.of(context).primaryColor),
               ),
               onTap: () {
-                SystemNavigator.pop();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
               },
             ),
             Divider(

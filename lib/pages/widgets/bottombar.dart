@@ -1,5 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:innovatim/pages/discount.dart';
+import 'package:innovatim/pages/gorev.dart';
 import 'package:innovatim/pages/maps.dart';
 import 'package:innovatim/pages/profile_page.dart';
 
@@ -20,14 +22,12 @@ class Bottombar extends StatelessWidget {
         buttonBackgroundColor: const Color(0xFFF2F5C8),
         height: 50,
         items: const <Widget>[
-          Icon(Icons.search, size: 28, color: const Color(0xFF219F94)),
-          Icon(Icons.money_off_outlined,
-              size: 26, color: const Color(0xFF219F94)),
-          Icon(Icons.map_sharp, size: 26, color: const Color(0xFF219F94)),
-          Icon(Icons.chat_bubble_outline_sharp,
-              size: 26, color: const Color(0xFF219F94)),
+          Icon(Icons.search, size: 28, color: Color(0xFF219F94)),
+          Icon(Icons.account_tree_outlined, size: 26, color: Color(0xFF219F94)),
+          Icon(Icons.map_sharp, size: 26, color: Color(0xFF219F94)),
+          Icon(Icons.money_off_csred, size: 26, color: Color(0xFF219F94)),
           Icon(Icons.person_outline_rounded,
-              size: 26, color: const Color(0xFF219F94)),
+              size: 26, color: Color(0xFF219F94)),
         ],
         animationDuration: const Duration(microseconds: 200),
         index: indexmenu,
@@ -42,7 +42,7 @@ class Bottombar extends StatelessWidget {
             case 1:
               //indirimler sayfası buraya eklenecek
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()));
+                  MaterialPageRoute(builder: (context) => GorevPage()));
               break;
             case 2:
               Navigator.push(
@@ -50,6 +50,10 @@ class Bottombar extends StatelessWidget {
 
               break;
             case 3:
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const discountPage()));
               break;
             case 4:
               Navigator.push(context,

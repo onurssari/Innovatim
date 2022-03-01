@@ -3,6 +3,7 @@ import 'package:innovatim/pages/widgets/appbar.dart';
 import 'package:innovatim/pages/widgets/bottombar.dart';
 import 'package:innovatim/pages/widgets/drawer.dart';
 import 'package:innovatim/pages/widgets/header_widget.dart';
+import 'package:innovatim/pages/widgets/number_size.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -65,6 +66,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     'Bilgisayar Mühendisi',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
+                  const SizedBox(height: 24),
+                  NumbersWidget(),
                   const SizedBox(
                     height: 10,
                   ),

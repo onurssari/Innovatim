@@ -32,7 +32,7 @@ class _mapsPageState extends State<mapsPage> {
         accentColor: const Color(0xFFF2F5C8),
       ),
       home: Scaffold(
-        appBar: const myAppbar(text: 'kirli alanlar'),
+        appBar: const myAppbar(text: 'Kirli Alanlar'),
         drawer: const MyDrawer(),
         bottomNavigationBar: const Bottombar(
           indexmenu: 2,
