@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Center(
               child: ClipOval(
                 child: Icon(
-                  Icons.all_inclusive_sharp,
+                  Icons.delete_outline_sharp,
                   size: 128,
                   color: Theme.of(context).primaryColor,
                 ), //put your logo here
